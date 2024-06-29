@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "client/build"
+  functions = "functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
